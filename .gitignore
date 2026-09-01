@@ -1,0 +1,15 @@
+# Local Netlify folder
+.netlify
+
+# Other standalone projects (each has its own repo)
+/remotion-video
+/reptilian-interface
+/web-cinematic-scroll
+
+# Tooling/config not part of the site
+/.claude
+/.agents
+skills-lock.json
+
+# Raw source footage, not used by the site (frames/ webp sequence is used instead)
+davinci_cinematic_aerial_drone_footage_flying_over_a_park_.mp4

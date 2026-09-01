@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aerial — Estudio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <div id="loader" class="loader">
+    <div class="loader__label">Cargando</div>
+    <div class="loader__bar"><div class="loader__fill" id="loaderFill"></div></div>
+  </div>
+
+  <main id="main" class="hidden">
+
+    <section id="hero" class="hero">
+      <canvas id="heroCanvas" class="hero__canvas"></canvas>
+      <div class="hero__overlay" id="heroOverlay">
+        <p class="hero__eyebrow">Vista aérea</p>
+        <h1 class="hero__title">Sobre el<br>silencio del parque</h1>
+        <p class="hero__sub">Un recorrido lento, visto desde arriba.</p>
+      </div>
+      <div class="hero__scrollcue" id="scrollCue">
+        <span></span>
+      </div>
+    </section>
+
+    <section class="panel panel--one">
+      <span class="panel__bignum" data-parallax="0.15"><span class="panel__bignum__inner">01</span></span>
+      <div class="panel__grid">
+        <div class="panel__inner">
+          <span class="panel__index">01 — Tierra</span>
+          <h2 class="panel__title">Más lejos<br>que el Everest</h2>
+          <p class="panel__text">
+            El punto más alejado del centro de la Tierra no es la cima del
+            Everest — es el volcán Chimborazo, en Ecuador. El planeta gira
+            tan rápido que se abulta en el ecuador: no es una esfera
+            perfecta, sino un elipsoide achatado en los polos.
+          </p>
+        </div>
+        <div class="panel__visual">
+          <svg class="line-art" viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="draw" cx="120" cy="92" r="30" pathLength="1" stroke="currentColor" stroke-width="1.2"/>
+            <line class="draw" x1="30" y1="292" x2="450" y2="292" pathLength="1" stroke="currentColor" stroke-width="1"/>
+            <path class="draw" d="M30,292 L110,175 L150,225 L215,90 L255,175 L300,130 L360,250 L410,205 L450,292" pathLength="1" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel panel--two">
+      <span class="panel__bignum panel__bignum--right" data-parallax="0.15"><span class="panel__bignum__inner">02</span></span>
+      <div class="panel__grid panel__grid--reverse">
+        <div class="panel__visual">
+          <svg class="line-art" viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse class="draw" cx="240" cy="180" rx="70" ry="26" pathLength="1" stroke="currentColor" stroke-width="1"/>
+            <ellipse class="draw" cx="240" cy="180" rx="140" ry="58" pathLength="1" stroke="currentColor" stroke-width="1" transform="rotate(-12 240 180)"/>
+            <ellipse class="draw" cx="240" cy="180" rx="205" ry="92" pathLength="1" stroke="currentColor" stroke-width="1" transform="rotate(8 240 180)"/>
+            <circle class="fill-dot" cx="240" cy="180" r="7" fill="currentColor"/>
+            <circle class="fill-dot" cx="118" cy="150" r="2.5" fill="currentColor"/>
+            <circle class="fill-dot" cx="360" cy="120" r="2" fill="currentColor"/>
+            <circle class="fill-dot" cx="410" cy="230" r="2.5" fill="currentColor"/>
+            <circle class="fill-dot" cx="70" cy="240" r="2" fill="currentColor"/>
+            <circle class="fill-dot" cx="300" cy="70" r="1.6" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="panel__inner">
+          <span class="panel__index">02 — Universo</span>
+          <h2 class="panel__title">Más rápido<br>que la luz</h2>
+          <p class="panel__text">
+            El universo observable tiene 13.800 millones de años, pero mide
+            93.000 millones de años luz de diámetro. La luz no viajó más
+            rápido — es el espacio mismo el que se expande, alejando las
+            galaxias más deprisa de lo que su propia luz puede alcanzarnos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel panel--places" id="places">
+      <span class="panel__bignum" data-parallax="0.1"><span class="panel__bignum__inner">03</span></span>
+
+      <div class="places__header panel__inner">
+        <span class="panel__index">03 — Lugares</span>
+        <h2 class="panel__title">Siete maravillas,<br>lugares imposibles.</h2>
+      </div>
+
+      <div class="places__track" id="placesTrack">
+
+        <article class="place-card" data-index="0">
+          <div class="place-card__visual">
+            <svg class="place-card__icon" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8,118 L40,118 L40,98 L62,98 L62,78 L92,78 L92,58 L120,58 L120,78 L150,78 L150,98 L178,98 L178,118 L192,118" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+              <line x1="4" y1="118" x2="196" y2="118" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <span class="place-card__hotspot"></span>
+          <span class="place-card__num">01</span>
+          <div class="place-card__body">
+            <h3 class="place-card__title">Gran Muralla China</h3>
+            <p class="place-card__text">Más de 21.000&nbsp;km de piedra y tierra — la única construcción humana que se distingue a simple vista desde órbita baja.</p>
+          </div>
+        </article>
+
+        <article class="place-card" data-index="1">
+          <div class="place-card__visual">
+            <svg class="place-card__icon" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20,150 L60,20 M180,150 L140,20" stroke="currentColor" stroke-width="1"/>
+              <line x1="82" y1="150" x2="82" y2="55" stroke="currentColor" stroke-width="1.3"/>
+              <line x1="100" y1="150" x2="100" y2="55" stroke="currentColor" stroke-width="1.3"/>
+              <line x1="118" y1="150" x2="118" y2="55" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M76,55 L100,25 L124,55 Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="place-card__hotspot"></span>
+          <span class="place-card__num">02</span>
+          <div class="place-card__body">
+            <h3 class="place-card__title">Petra, Jordania</h3>
+            <p class="place-card__text">Una ciudad entera esculpida en roca rosa, oculta durante siglos dentro de un desfiladero del desierto.</p>
+          </div>
+        </article>
+
+        <article class="place-card" data-index="2">
+          <div class="place-card__visual">
+            <svg class="place-card__icon" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10,130 L60,40 L100,90 L130,30 L190,130" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/>
+              <line x1="30" y1="112" x2="70" y2="112" stroke="currentColor" stroke-width="1"/>
+              <line x1="40" y1="126" x2="90" y2="126" stroke="currentColor" stroke-width="1"/>
+              <line x1="110" y1="118" x2="150" y2="118" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <span class="place-card__hotspot"></span>
+          <span class="place-card__num">03</span>
+          <div class="place-card__body">
+            <h3 class="place-card__title">Machu Picchu</h3>
+            <p class="place-card__text">Una ciudadela inca a 2.430&nbsp;metros de altura, construida sin argamasa y alineada con precisión astronómica.</p>
+          </div>
+        </article>
+
+        <article class="place-card" data-index="3">
+          <div class="place-card__visual">
+            <svg class="place-card__icon" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="100" cy="120" rx="78" ry="24" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M75,110 L82,80 L90,105 L98,55 L106,105 L114,75 L122,110" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="place-card__hotspot"></span>
+          <span class="place-card__num">04</span>
+          <div class="place-card__body">
+            <h3 class="place-card__title">Puerta al Infierno</h3>
+            <p class="place-card__text">Un cráter de gas en Turkmenistán que arde sin pausa desde 1971 — nadie sabe con certeza cuándo se apagará.</p>
+          </div>
+        </article>
+
+        <article class="place-card" data-index="4">
+          <div class="place-card__visual">
+            <svg class="place-card__icon" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="10" y1="70" x2="190" y2="70" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M60,70 L100,25 L140,70" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+              <path d="M60,70 L100,115 L140,70" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" opacity="0.45"/>
+            </svg>
+          </div>
+          <span class="place-card__hotspot"></span>
+          <span class="place-card__num">05</span>
+          <div class="place-card__body">
+            <h3 class="place-card__title">Salar de Uyuni</h3>
+            <p class="place-card__text">El espejo natural más grande del mundo: 10.000&nbsp;km² de sal que reflejan el cielo a la perfección tras la lluvia.</p>
+          </div>
+        </article>
+
+        <article class="place-card" data-index="5">
+          <div class="place-card__visual">
+            <svg class="place-card__icon" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="100" y1="140" x2="100" y2="85" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M100,85 C60,85 45,50 55,35 C65,50 80,55 100,55 C120,55 135,50 145,35 C155,50 140,85 100,85 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+              <line x1="20" y1="140" x2="180" y2="140" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <span class="place-card__hotspot"></span>
+          <span class="place-card__num">06</span>
+          <div class="place-card__body">
+            <h3 class="place-card__title">Socotra, Yemen</h3>
+            <p class="place-card__text">Una isla tan aislada que un tercio de sus plantas no existe en ningún otro lugar de la Tierra.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="places__nav">
+        <button class="places__arrow" id="placesPrev" aria-label="Anterior">←</button>
+        <button class="places__arrow" id="placesNext" aria-label="Siguiente">→</button>
+      </div>
+    </section>
+
+    <section class="panel panel--three">
+      <span class="panel__bignum" data-parallax="0.15"><span class="panel__bignum__inner">04</span></span>
+      <div class="panel__inner">
+        <span class="panel__index">04</span>
+        <h2 class="panel__title">De un parque<br>al borde del espacio</h2>
+        <p class="panel__text">
+          Un mismo recorrido, dos escalas: la calma de un parque y la
+          inmensidad que lo contiene. Gracias por mirar desde arriba.
+        </p>
+        <a class="panel__link" href="#hero">Volver arriba ↑</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
