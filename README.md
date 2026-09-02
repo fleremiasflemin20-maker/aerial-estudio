@@ -15,7 +15,7 @@
 <br/>
 
 <p align="center">
-  <img src="./preview.jpg" width="90%" alt="Vista previa de Aerial — Estudio" />
+  <img src="https://github.com/user-attachments/assets/6e5678f3-9478-4a71-aecf-11eb2c472916" width="90%" alt="Vista previa de Aerial — Estudio" />
 </p>
 
 ## Sobre el proyecto
